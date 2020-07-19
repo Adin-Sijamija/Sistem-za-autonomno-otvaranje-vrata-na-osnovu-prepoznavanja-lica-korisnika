@@ -1,0 +1,138 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python: DlibEnncodeFaces.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["--encodings", "encodings.pickle", "--output",
+                "output/webcam_face_recognition_output.avi", "--display" ,"1"
+            ]
+            
+        },
+        {
+            "name": "Python: dodaj_slike_korisnika.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": ["--Ime","Adin Sijamija",
+                "--Kamera","0",
+                "--Broj","15"]
+        },
+     
+        {
+            "name": "Python: prepoznaj_korisnika.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--Detektor",
+                "face_detection_model",
+                "--embedding-model",
+                "openface_nn4.small2.v1.t7",
+                "--Prepoznavac",
+                "output/recognizer.pickle",
+                "--Labela",
+                "output/le.pickle"
+                
+            ]
+        },
+        {
+            "name": "Python: TestLica.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--detector",
+                "face_detection_model",
+                "--embedding-model",
+                "openface_nn4.small2.v1.t7",
+                "--recognizer",
+                "output/recognizer.pickle",
+                "--le",
+                "output/le.pickle"
+                
+            ]
+        },
+
+
+        {
+            "name": "Python: extract_embeddings.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--dataset",
+                "dataset",
+                "--embeddings",
+                "output/embeddings.pickle",
+                "--detector",
+                "face_detection_model",
+                "--embedding-model",
+                "openface_nn4.small2.v1.t7"
+            ]
+        },
+
+        {
+            "name": "Python: Slike_enkodiranje.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--Podaci",
+                "podaci/korisnici",
+                "--Embeding",
+                "output/encodings.pickle",
+                "--Detektor",
+                "face_detection_model",
+                "--Embeding-Model",
+                "openface_nn4.small2.v1.t7",
+                "--Spasi-Slike",
+                "1"
+            ]
+        },
+        {
+            "name": "Python: treniraj_mašinu.py",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "args": [
+                "--embeddings",
+                "output/encodings.pickle",
+                "--recognizer",
+                "output/recognizer.pickle",
+                "--le",
+                "output/le.pickle"
+            ]
+        },
+        {
+            "name": "Python: Current File",
+            "type": "python",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        }
+
+
+    ]
+}

@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+pySerialTransfer/CRC.py
+pySerialTransfer/__init__.py
+pySerialTransfer/pySerialTransfer.py
+pySerialTransfer.egg-info/PKG-INFO
+pySerialTransfer.egg-info/SOURCES.txt
+pySerialTransfer.egg-info/dependency_links.txt
+pySerialTransfer.egg-info/top_level.txt
