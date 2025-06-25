@@ -1,22 +1,32 @@
-# Sistem-za-autonomno-otvaranje-vrata-na-osnovu-prepoznavanja-lica-korisnika
-[AI, deep learning, machine learning, facial recognition, arduino]
+System for Autonomous Door Opening Based on User Facial Recognition
+[AI, deep learning, machine learning, facial recognition, Arduino]
 
+[English]
+Final thesis after the first cycle of studies at the Faculty of Information Technologies (FIT) in Mostar.
+The project encompasses the fields of artificial intelligence and computer vision with the goal of recognizing the faces of users who make up the system’s user database.
 
-[Bosnian]
-Završni rad nakon prvog cisklusa studija na fakultetu FIT Mostar.
-Obuhvata polja umjetne inteligencije i računarskog vida u cilju prepoznavanja lica korisnika koji sačinjavaju bazu podataka korisnika
+The Python programming language was used.
 
-Korišten python programski jezik.
+The system consists of two main parts:
 
-Navedena sistem se dijeli na računarsku aplikaciju i na arduino komponente instalirane na model vrata.
+A computer application
 
-Unutar navedene računarske aplikacije provodimo sljedeće procese:
-1. Dodavanje slika korisnika i našu bazu podataka
-2. Ekstraktovanje lica korisnika iz slika koje smo spasili u bazi podataka --- U tom procesu ih također ispravljamo lice na jednu horizontalnu ravnu tj. da su oči na istoj razini kao i odbacivanje neadekvatnih slika ( bez lica/2 ili više lica )
-3. Enkodiranje lica korisnika-- pretvaranje lica korisnika u 128 numericki niz podataka.
-4.Treniranje vektor mašine- korištenje prije dobivenih enkodiranka kako bi trenirali novu umjetnu inteligenciju koja može porediti nova enkodiranjima sa spašenim enkodiranjim naših korisnika i izraziti koliko je AI suguran da nova enkidiranja pripadaju jednom od naših korisnika
-5. Prepoznavanje korisnika u video snimku- Koristimo umjetnu inteligenciju kako bi prepoznali lice u video snimku. Zatim izvodimo okvir lica koje enkodiramo i šaljemo našoj umjetnoj inteligenciji prepoznavanja. Svako prepoznavanje držimo u deque listi koja spašava rezultate zadnih 50 frameova. Ako smo sigurni da je u pitanju lice korisnika otvarama vrata slanjem signala arduinu ili ako mislimo da je nepoznata osoba počinjemo proces snimanja video snimka za kasniji pregled.
+Arduino components installed on a model door
 
-Više informacija o radu sistema možete naći unutar word dokumentacije.
+Within the computer application, the following processes are carried out:
 
-[English] Todo...
+Adding user images to the database
+
+Extracting user faces from the saved images in the database — During this process, we also align the face horizontally (ensuring the eyes are at the same level) and discard inadequate images (e.g., those without a face or with multiple faces).
+
+Encoding user faces — Converting user faces into 128-dimensional numerical data vectors.
+
+Training a support vector machine (SVM) — Using the previously obtained encodings to train a new AI model that can compare new encodings with those stored in the user database and estimate the confidence level that the new encoding belongs to one of the registered users.
+
+Recognizing users in video footage — The AI is used to detect faces in a video stream. It then draws a bounding box around the face, encodes it, and sends it to the recognition AI. All recognition results are stored in a deque list that keeps results from the last 50 frames.
+
+If we are confident that the face belongs to a registered user, we trigger the door opening by sending a signal to the Arduino.
+
+If the person is unknown, we begin recording a video clip for later review.
+
+More detailed information about the system can be found in the accompanying Word documentation.
